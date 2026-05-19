@@ -1,6 +1,7 @@
 const socket = io(); //This line send request automatically to server (io.on()) to establish connection. [Client connect to server]
+//io() comes from this file: <script src="https://cdn.socket.io/4.8.3/socket.io.min.js"></script>
 
-// socket.emit("joinGame"); //client send an name "joinGame" event “I want to join the game”.[User send event to server]
+// socket.emit("joinGame"); //client send an name "joinGame" event “I want to join the game”.[User send event to server] Structure: socket.emit("eventName", data)
 // socket.on("playerJoined", () => { //“If server broadcast playerJoined, run this code” [Browser listens]
 //     console.log("A player has joined the game.");
 // });
@@ -27,22 +28,3 @@ const handleMove = () => { }; // Function to handle a move made by the player
 const getPieceUnicode = () => { }; // Function to get the Unicode character for a chess piece based on its type and color
 renderBoard(); // Initial call to render the chessboard when the page loads
 
-
-
-
-
-
-
-
-
-
-
-
-
-const socket = io(); //This line send request automatically to server (io.on()) to establish connection. [Client connect to server]
-//io() comes from this file: <script src="https://cdn.socket.io/4.8.3/socket.io.min.js"></script>
-
-socket.emit("joinGame"); //client send an name "joinGame" event “I want to join the game”.[User send event to server]. Structure: socket.emit("eventName", data)
-socket.on("playerJoined", () => { //“If server broadcast playerJoined, run this code” [Browser listens]
-    console.log("A player has joined the game.");
-});
